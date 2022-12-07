@@ -12,7 +12,7 @@ export default function Detail(props) {
                     <h2>{props.posts.title}</h2>
                     <p>{props.posts.overview}</p>
                 </div>
-                    <button type="button" onClick={() => router.back()}>
+                    <button className={styles.button} type="button" onClick={() => router.back()}>
                         Atras
                     </button>
             </div>

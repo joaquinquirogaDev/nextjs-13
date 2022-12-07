@@ -39,26 +39,25 @@ export default function Blog({ posts }) {
             {posts.results ? (
                 posts.results && posts.results.map((item) => (
                     <div key={item.id} className={s.card}>
-                        <div className={s.image}>
-                            <img src={`http://image.tmdb.org/t/p/w500/${item.poster_path}`} />
-                        </div>
-                        <div className={s.content}>
-                            {shortText(item.title)}
-                            <br />
                             <Link href='/Post/[id]' as={`/Post/${item.id}`}>
-                                <button>
-                                    detalles
-                                </button>
+                            <div className={s.image}>
+                                <img src={`http://image.tmdb.org/t/p/w500/${item.poster_path}`} />
+                            </div>
+                            <div className={s.content}>
+                                <p>{shortText(item.title)}</p>
+                                <br />
+                                
+                            </div>
                             </Link>
-                        </div>
                     </div>
-                ))
+    ))
             ) : (
-                <p>No hay nada</p>
-            )}
+        <p>No hay nada</p>
+    )
+}
 
-            <p>Pagina Actual</p>
-        </div>
+{/* <p>Pagina Actual</p> */}
+        </div >
     )
 }
 
