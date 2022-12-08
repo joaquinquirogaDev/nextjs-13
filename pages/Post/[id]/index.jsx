@@ -7,14 +7,16 @@ export default function Detail(props) {
     return (
         <div className={styles.contenedor}>
             <div className={styles.card}>
-                <img src={`http://image.tmdb.org/t/p/w500/${props.posts.backdrop_path}`} alt="Details" />
+                <picture>
+                    <img src={`http://image.tmdb.org/t/p/w500/${props.posts.backdrop_path}`} alt="Details" />
+                </picture>
                 <div className={styles.info}>
                     <h2>{props.posts.title}</h2>
                     <p>{props.posts.overview}</p>
                 </div>
-                    <button className={styles.button} type="button" onClick={() => router.back()}>
-                        Atras
-                    </button>
+                <button className={styles.button} type="button" onClick={() => router.back()}>
+                    Atras
+                </button>
             </div>
         </div>
     )
