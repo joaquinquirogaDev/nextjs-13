@@ -41,9 +41,7 @@ export default function Blog({ posts }) {
                     <div key={item.id} className={s.card}>
                         <Link href='/Post/[id]' as={`/Post/${item.id}`}>
                             <div className={s.image}>
-                                <picture>
-                                    <img src={`http://image.tmdb.org/t/p/w500${item.poster_path}`} alt="Posts" />
-                                </picture>
+                                    <Image src={`http://image.tmdb.org/t/p/w500${item.poster_path}`} alt="Posts" width={100} height={100} object-fit="cover"/>
                             </div>
                             <div className={s.content}>
                                 <p>{shortText(item.title)}</p>
