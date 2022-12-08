@@ -7,7 +7,7 @@ export default function Detail(props) {
     return (
         <div className={styles.contenedor}>
             <div className={styles.card}>
-                <picture>
+                <picture style={{width: '100%', height: '50%'}}>
                     <img src={`http://image.tmdb.org/t/p/w500/${props.posts.backdrop_path}`} alt="Details" />
                 </picture>
                 <div className={styles.info}>
