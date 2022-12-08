@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
 import styles from '../../../styles/Details.module.css'
-import Image from 'next/image'
+
 export default function Detail(props) {
     console.log(props)
     const router = useRouter()
     return (
         <div className={styles.contenedor}>
             <div className={styles.card}>
-                <Image src={`http://image.tmdb.org/t/p/w500/${props.posts.backdrop_path}`} alt="" />
+                <img src={`http://image.tmdb.org/t/p/w500/${props.posts.backdrop_path}`} alt="Details" />
                 <div className={styles.info}>
                     <h2>{props.posts.title}</h2>
                     <p>{props.posts.overview}</p>
